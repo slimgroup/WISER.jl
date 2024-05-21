@@ -70,10 +70,11 @@ import DrWatson: _wsave
 _wsave(s, fig::Figure) = fig.savefig(s, bbox_inches="tight", dpi=100)
 PyPlot.rc("font", family="serif");
 
+mkpath(datadir())
 data_path = datadir("m_train_compass.jld2")
+data_link = "https://www.dropbox.com/scl/fi/zq7p8xofbmfm7a2m0q8u6/m_train_compass.jld2?rlkey=2jwg4l30sdhc68dxnyy336njn&dl=1"
 if ~isfile(data_path)
-    run(`wget https://www.dropbox.com/scl/fi/zq7p8xofbmfm7a2m0q8u6/'
-        'm_train_compass.jld2 -q -O $data_path`)
+    run(`wget -O $data_path $data_link`)
 end
 m_train = JLD2.jldopen(data_path, "r")["m_train"];
 
@@ -132,9 +133,9 @@ m0 = background_1d_average()
 n_tot_sample = size(m_train)[end]
 
 cig_path = datadir("cig_train.jld2")
+cig_link = "https://www.dropbox.com/scl/fi/afcd4429f4nzr9ub3qb1y/cig_train.jld2?rlkey=gjbplnv7iysv4ecumyxt3u0rs&dl=1"
 if ~isfile(cig_path)
-    run(`wget https://www.dropbox.com/scl/fi/afcd4429f4nzr9ub3qb1y/'
-        'cig_train.jld2 -q -O $cig_path`)
+    run(`wget -O $cig_path $cig_link`)
 end
 grad_train = JLD2.jldopen(cig_path, "r")["grad_train"];
 
@@ -192,9 +193,9 @@ loss      = []; logdet_train = []; ssim      = []; l2_cm      = [];
 loss_test = []; logdet_test  = []; ssim_test = []; l2_cm_test = [];
 
 net_path = datadir("trained-wise-cnf.bson")
+net_link = "https://www.dropbox.com/scl/fi/o6x72s6e1chodnl8l79bd/trained-wise-cnf.bson?rlkey=n37wvo1gzbrhxwzmvfmamw5pt&dl=1"
 if ~isfile(net_path)
-    run(`wget https://www.dropbox.com/scl/fi/o6x72s6e1chodnl8l79bd/'
-        'trained-wise-cnf.bson -q -O $net_path`)
+    run(`wget -O $net_path $net_link`)
 end
 
 unet_lev = BSON.load(net_path)["unet_lev"];
