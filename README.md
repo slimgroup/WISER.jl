@@ -24,9 +24,14 @@ First, install [Julia](https://julialang.org/) and [Python](https://www.python.o
 
 ## Scripts
 
-[wiser.jl](scripts/gen_cig_openfwi.jl) runs the WISER algorithm in the paper to perform physics-based latent space correction.
+[wiser.jl](scripts/wiser.jl) runs the WISER algorithm in the paper to perform physics-based latent space correction.
 
 The script [utils.jl](scripts/utils.jl) parses the input as keywords for each experiment.
+
+The following keyword arguments can be used to reproduce the results in the WISER paper:
+
+- Case 1: `julia wiser.jl --lr_wiser=0.004`
+- Case 2: `julia wiser.jl --test_snr=0.0 --amplitude=0.2 --lambda=10.0 --lr_pre=0.0004`
 
 ## LICENSE
 

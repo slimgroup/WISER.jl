@@ -57,7 +57,7 @@ function parse_commandline()
         "--wiser_batch_size"
             help = "number of particles during WISER"
             arg_type = Int
-            default = 8
+            default = 16
         "--lambda"
             help = "lambda in WISER"
             arg_type = Float32
