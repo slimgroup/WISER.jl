@@ -1,10 +1,10 @@
-<h1 align="center">WISER: multimodal variational inference for full-waveform inversion without dimensionality reduction</h1>
+<h1 align="center">WISER: Multimodal variational inference for full-waveform inversion without dimensionality reduction</h1>
 
-[![][license-img]][license-status]
+[![][license-img]][license-status] [![](https://img.shields.io/badge/DOI-10.1190/geo2024--0483.1-blue)](https://doi.org/10.1190/geo2024-0483.1)
 
-Code to reproduce results in Ziyi Yin, Rafael Orozco, Felix J. Herrmann, "[WISER: multimodal variational inference for full-waveform inversion without dimensionality reduction](https://doi.org/10.48550/arXiv.2405.10327)". Preprint on ArXiv. DOI: 10.48550/arXiv.2405.10327
+Code to reproduce results in Ziyi Yin, Rafael Orozco, Felix J. Herrmann, "[WISER: Multimodal variational inference for full-waveform inversion without dimensionality reduction](https://doi.org/10.1190/geo2024-0483.1)", published in Geophysics.
 
-WISER is an extension to [WISE](https://doi.org/10.1190/geo2023-0744.1), published in Geophysics.
+WISER is an extension to [WISE](https://doi.org/10.1190/geo2023-0744.1), which is also published in Geophysics.
 
 ## Software descriptions
 
